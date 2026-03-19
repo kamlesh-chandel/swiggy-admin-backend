@@ -5,7 +5,13 @@ const config: Core.Config.Middlewares = [
   "global::global-error-handler",
   "strapi::errors",
   "strapi::security",
-  "strapi::cors",
+  ,
+  {
+    name: "strapi::cors",
+    config: {
+      origin: ["*"], // for testing
+    },
+  },
   "strapi::poweredBy",
   "strapi::query",
   "strapi::body",
