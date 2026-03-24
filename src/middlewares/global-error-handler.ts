@@ -6,6 +6,7 @@ export default () => {
       await next();
 
       // Handle Strapi structured errors (like 403 from policies)
+      //hello
 if (typeof ctx.body === "object" && ctx.body !== null && "error" in ctx.body) {
   const body = ctx.body as {
     error?: {
